@@ -14,7 +14,7 @@ SD = statistics.stdev(data)
 median= statistics.median(data)
 mode=statistics.mode(data)
 
-#splitting the data into 3 and calculating the SD for them.
+#finding 3 diff SD by subtracting the SD from the mean and then adding it to the mean too.
 SDstart1,SDend1=mean-SD,mean+SD
 SDstart2,SDend2=mean-(2*SD),mean+(2*SD)
 SDstart3,SDend3=mean-(3*SD),mean+(3*SD)
@@ -29,7 +29,7 @@ print("Median is {}".format(median))
 print("Mode is {}".format(mode))
 print("Standard deviation is {}".format(SD))
 
-#cutting/showing the data into 3 and then getting the SD for them.
+#finding 3 diff SD's and then printing them.
 print("{}% of data lies within 1st standard deviation.".format(len(list_of_data_within_1_SD)*100.0/len(data)))
 print("{}% of data lies within 2nd standard deviation.".format(len(list_of_data_within_2_SD)*100.0/len(data)))
 print("{}% of data lies within 3rd standard deviation.".format(len(list_of_data_within_3_SD)*100.0/len(data)))
